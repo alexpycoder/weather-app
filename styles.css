@@ -1,0 +1,24 @@
+/* borderbox? */
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+
+
+.main_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+
+.weather_stuff {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    
+}

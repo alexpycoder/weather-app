@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <header></header>
+    <main class="main_box">
+        <h3>Weather App</h3>
+        
+        <form autocomplete="off" action="/" method="POST">
+            <label for="search_box"></label>
+            <input type="text" name="search_box" id="search_box" placeholder="i.e London, UK" required>
+            <button type="submit">check</button>
+        </form>
+        <section class="weather_stuff">
+            <div class="city">
+                {% if weather_display %}
+                <h3>{{ weather_display['name'] }}, {{ weather_display['country'] }}</h3>
+                    <p>Current Temp: {{ weather_display['current_temp'] }} C</p>
+                    <p>Feels like: {{ weather_display['feels_like'] }} C</p>
+                    <p>Pressure: {{ weather_display['pressure'] }} P</p>
+                    <p>Visibility: {{ weather_display['visibility'] }} CM</p>
+                    <p>Wind speed: {{ weather_display['wind'] }} M/S</p>
+                {% endif %}
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    
+</body>
+</html>
